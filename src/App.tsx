@@ -7,7 +7,11 @@ function App() {
       {/* Header */}
       <header className="container mx-auto px-4 py-8 flex items-center justify-center">
         <div className="flex items-center gap-3">
-          <span className="text-5xl font-serif font-bold text-coffee-800">E.</span>
+          <img
+            src="/entrepreneur_quotes_web/images/icon.png"
+            alt="Entrepreneur Quotes Logo"
+            className="w-12 h-12 object-contain"
+          />
           <h1 className="text-3xl font-bold text-coffee-800">Entrepreneur Quotes</h1>
         </div>
       </header>
@@ -26,28 +30,54 @@ function App() {
             
             {/* Download Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="flex items-center justify-center gap-2 bg-coffee-800 text-cream px-8 py-4 rounded-lg hover:bg-coffee-700 transition-colors">
-                <AppStore className="w-6 h-6" />
-                <span>Download for iOS</span>
-              </button>
-              <button className="flex items-center justify-center gap-2 bg-terra-600 text-cream px-8 py-4 rounded-lg hover:bg-terra-500 transition-colors">
-                <PlayStore className="w-6 h-6" />
-                <span>Download for Android</span>
-              </button>
+              <a
+                href="https://apple.co/3X8MT2P"
+                className="hover:opacity-80 transition-opacity"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/entrepreneur_quotes_web/images/app_store.webp"
+                  alt="Download on the App Store"
+                  className="h-[40px] w-auto"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                  }}
+                />
+              </a>
+              <a
+                href="#"
+                className="hover:opacity-80 transition-opacity"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/entrepreneur_quotes_web/images/play_store.webp"
+                  alt="Get it on Google Play"
+                  className="h-[40px] w-auto"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                  }}
+                />
+              </a>
             </div>
           </div>
 
           {/* Right Content - Phone Mockup */}
-          <div className="flex-1 relative">
-            <div className="relative mx-auto w-[280px] h-[580px] bg-coffee-800 rounded-[3rem] p-4 shadow-2xl">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-6 bg-coffee-800 rounded-b-3xl"></div>
-              <div className="h-full w-full rounded-[2.5rem] overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=1000&fit=crop"
-                  alt="App Screenshot"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+          <div className="flex-1 relative flex justify-center items-center">
+            <div className="relative w-[300px] h-auto">
+              <img
+                src="/entrepreneur_quotes_web/images/iphone.webp"
+                alt="Entrepreneur Quotes App Screenshot"
+                className="w-full h-auto object-contain"
+                loading="lazy"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/entrepreneur_quotes_web/images/fallback-mockup.png';
+                }}
+              />
             </div>
           </div>
         </div>
@@ -88,18 +118,50 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="container mx-auto px-4 py-8 text-center text-coffee-600">
-        <p>
-          Made with ❤️ by{' '}
-          <a
-            href="https://spicytaco.xyz"
-            className="text-terra-600 hover:text-terra-500 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Spicy Taco
-          </a>
-        </p>
+      <footer className="container mx-auto px-4 py-8">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          {/* Left side - Made with love */}
+          <div className="text-coffee-600">
+            Made with ❤️ by{' '}
+            <a
+              href="https://spicytaco.xyz"
+              className="text-terra-600 hover:text-terra-500 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Spicy Taco
+            </a>
+          </div>
+
+          {/* Right side - Social Links */}
+          <div className="flex items-center gap-6">
+            <a
+              href="https://www.instagram.com/entrepreneurapp/"
+              className="text-coffee-600 hover:text-terra-600 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow us on Instagram"
+            >
+              <i className="fab fa-instagram text-xl"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/entrepreneurquotesapp"
+              className="text-coffee-600 hover:text-terra-600 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow us on Facebook"
+            >
+              <i className="fab fa-facebook text-xl"></i>
+            </a>
+            <a
+              href="mailto:hello@spicytaco.xyz"
+              className="text-coffee-600 hover:text-terra-600 transition-colors"
+              aria-label="Contact us via email"
+            >
+              <i className="fas fa-envelope text-xl"></i>
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
