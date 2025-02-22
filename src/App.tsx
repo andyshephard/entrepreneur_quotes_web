@@ -29,10 +29,10 @@ function App() {
             </p>
             
             {/* Download Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:justify-start">
               <a
                 href="https://apple.co/3X8MT2P"
-                className="hover:opacity-80 transition-opacity"
+                className="hover:opacity-80 transition-opacity w-fit"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -48,7 +48,7 @@ function App() {
               </a>
               <a
                 href="#"
-                className="hover:opacity-80 transition-opacity"
+                className="hover:opacity-80 transition-opacity w-fit"
                 target="_blank"
                 rel="noopener noreferrer"
               >
