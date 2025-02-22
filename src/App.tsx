@@ -8,7 +8,7 @@ function App() {
       <header className="container mx-auto px-4 py-8 flex items-center justify-center">
         <div className="flex items-center gap-3">
           <img
-            src="/entrepreneur_quotes_web/images/icon.png"
+            src="/images/icon.png"
             alt="Entrepreneur Quotes Logo"
             className="w-12 h-12 object-contain"
           />
@@ -37,7 +37,7 @@ function App() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/entrepreneur_quotes_web/images/app_store.webp"
+                  src="/images/app_store.webp"
                   alt="Download on the App Store"
                   className="h-[40px] w-auto"
                   onError={(e) => {
@@ -53,7 +53,7 @@ function App() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/entrepreneur_quotes_web/images/play_store.webp"
+                  src="/images/play_store.webp"
                   alt="Get it on Google Play"
                   className="h-[40px] w-auto"
                   onError={(e) => {
@@ -69,13 +69,13 @@ function App() {
           <div className="flex-1 relative flex justify-center items-center">
             <div className="relative w-[300px] h-auto">
               <img
-                src="/entrepreneur_quotes_web/images/iphone.webp"
+                src="/images/iphone.webp"
                 alt="Entrepreneur Quotes App Screenshot"
                 className="w-full h-auto object-contain"
                 loading="lazy"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = '/entrepreneur_quotes_web/images/fallback-mockup.png';
+                  target.src = '/images/fallback-mockup.png';
                 }}
               />
             </div>
